@@ -7,7 +7,7 @@ gdp_year = ts.get_gdp_year()
 gdp_year.set_index('year')
 gdp_year = gdp_year[::-1]
 
-gdp_year['gdp'] = gdp_year['gdp']
+gdp_year['gdp'] = gdp_year['gdp'].apply(lambda x: x/1000)
 
 gdp_year['lag'] = gdp_year['gdp'].shift()
 
