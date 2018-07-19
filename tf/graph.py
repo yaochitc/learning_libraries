@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tf as tf
 
 g = tf.Graph()
 

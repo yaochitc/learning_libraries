@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tf as tf
 
 dataset1 = tf.data.Dataset.range(100)
 iterator = dataset1.make_one_shot_iterator()

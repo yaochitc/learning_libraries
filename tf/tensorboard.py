@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tf as tf
 import numpy as np
 
 sess = tf.InteractiveSession()

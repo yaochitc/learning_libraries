@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tf as tf
 
 tf.enable_eager_execution()
 tfe = tf.contrib.eager

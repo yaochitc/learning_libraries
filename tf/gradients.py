@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tf as tf
 
 a = tf.Variable(0., name='a')
 b = 2 * a

@@ -1,6 +1,6 @@
-import tensorflow as tf
+import tf as tf
 
-from tensorflow.examples.tutorials.mnist import input_data
+from tf.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("../mnist/", one_hot=True)
 
 training_steps = 10000
@@ -39,10 +39,10 @@ with tf.Session() as sess:
         batch_x, batch_y = mnist.train.next_batch(batch_size)
         batch_x = batch_x.reshape((batch_size, timesteps, num_input))
         feed_dict = {x: batch_x, y: batch_y}
-        sess.run(train_op, feed_dict={x: batch_x, y: batch_y})
+        sess.run(train_op, feed_dict=feed_dict)
         if step % display_step == 0 or step == 1:
             # Calculate batch loss and accuracy
-            loss, acc = sess.run([loss_op, accuracy], feed_dict={x: batch_x, y: batch_y})
+            loss, acc = sess.run([loss_op, accuracy], feed_dict=feed_dict)
             print("Step " + str(step) + ", Minibatch Loss= " + \
                   "{:.4f}".format(loss) + ", Training Accuracy= " + \
                   "{:.3f}".format(acc))

@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tf as tf
 
 def simple_shuffle_batch(source, capacity, batch_size=10):
     queue = tf.RandomShuffleQueue(capacity=capacity,
